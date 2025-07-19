@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bukti Cinta untuk Karina</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(120deg, #ffb6c1 0%, #fff 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .love-container {
+            background: #fff8fa;
+            border-radius: 30px;
+            box-shadow: 0 8px 32px #e57373aa;
+            padding: 40px 30px 30px 30px;
+            text-align: center;
+            max-width: 400px;
+        }
+        h1 {
+            color: #e91e63;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+        .love-message {
+            color: #ad1457;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .heart {
+            width: 120px;
+            height: 110px;
+            margin: 0 auto 20px auto;
+            position: relative;
+            animation: beat 1s infinite;
+        }
+        .heart:before, .heart:after {
+            content: "";
+            position: absolute;
+            left: 60px;
+            top: 0;
+            width: 60px;
+            height: 100px;
+            background: #e91e63;
+            border-radius: 60px 60px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+        .heart:after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            20% { transform: scale(1.1); }
+            40% { transform: scale(0.95); }
+            60% { transform: scale(1.08); }
+            80% { transform: scale(0.97); }
+        }
+        .btn-surprise {
+            background: #e91e63;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 12px 32px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 0 2px 8px #e57373aa;
+            transition: background 0.2s;
+        }
+        .btn-surprise:hover {
+            background: #ad1457;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            left: 0; top: 0; right: 0; bottom: 0;
+            background: rgba(255,182,193,0.7);
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+        .popup-content {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px 40px;
+            box-shadow: 0 8px 32px #e57373aa;
+            text-align: center;
+            color: #e91e63;
+            font-size: 1.3em;
+        }
+        .close-btn {
+            margin-top: 20px;
+            background: #e91e63;
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            padding: 8px 24px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .close-btn:hover {
+            background: #ad1457;
+        }
+    </style>
+</head>
+<body>
+    <div class="love-container">
+        <div class="heart"></div>
+        <h1>Bukti Cinta untuk Karina</h1>
+        <div class="love-message">
+            Karina, kamu adalah alasan di balik setiap senyumku.<br>
+            Terima kasih sudah hadir dan mewarnai hidupku.<br>
+            Aku akan selalu berusaha menjadi yang terbaik untukmu.<br>
+            <b>I love you, Karina! ❤️</b>
+        </div>
+        <button class="btn-surprise" onclick="showSurprise()">Klik untuk kejutan!</button>
+    </div>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <div style="font-size:2em;">💖</div>
+            Karina, kamu sangat spesial di hatiku.<br>
+            Setiap detik bersamamu adalah anugerah.<br>
+            <b>Semoga cinta kita selalu abadi!</b>
+            <br><br>
+            <button class="close-btn" onclick="closeSurprise()">Tutup</button>
+        </div>
+    </div>
+    <script>
+        function showSurprise() {
+            document.getElementById('popup').style.display = 'flex';
+        }
+        function closeSurprise() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
